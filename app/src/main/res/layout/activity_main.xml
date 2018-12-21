@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ListView
+        android:id="@+id/taskList"
+        android:layout_width="316dp"
+        android:layout_height="411dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/findTask"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newTask" />
+
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:ems="10"
+        android:hint="Find by first name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/findTask"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/findTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:text="find"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/firstName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/newTask"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="46dp"
+        android:text="new task"
+        app:layout_constraintBottom_toTopOf="@+id/taskList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/findTask" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/newTask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstName" />
+
+</android.support.constraint.ConstraintLayout>
